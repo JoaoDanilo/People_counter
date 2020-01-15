@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(title: "Contador de pessoas", home: Home()));
+  runApp(MaterialApp(title: "People Counter", home: Home()));
 }
 
 class Home extends StatefulWidget {
@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 
   int _numPeople = 0;
-  String _infoText = "Pode entrar!";
+  String _infoText = "Please, come in!";
 
   void _changePeople(int delta) {
 
@@ -20,13 +20,13 @@ class _HomeState extends State<Home> {
       _numPeople += delta;
 
       if(_numPeople < 0) {
-        _infoText = "Mundo Invertido !?";
+        _infoText = "Upside down world !?";
       }
       else if(_numPeople > 10) {
-        _infoText = "Lotado!";
+        _infoText = "The place is full!";
       }
       else {
-        _infoText = "Pode entrar!";
+        _infoText = "Please, come in!";
       }
     });
     
@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Pessoas: $_numPeople",
+            Text("People: $_numPeople",
                 style:
                     TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
             Row(
